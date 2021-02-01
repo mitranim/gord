@@ -17,8 +17,8 @@ func NewSliceSet(vals ...interface{}) *SliceSet {
 
 // Ordered set implemented as a slice. Compared to `LinkedSet`, this is simpler
 // and more efficient (memory and CPU wise) for small sets, but some operations
-// has extreme performance degradation for large sets. Giving the exact values
-// of "small" and "large" requires more testing.
+// have extreme performance degradation for large sets. Giving the exact values
+// of "small" and "large" requires more testing; might depend on hardware.
 //
 // There's no "concurrent" version of this type, mainly because it would have to
 // sacrifice elegance. It may be added on demand.
