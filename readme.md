@@ -46,14 +46,12 @@ set.Values()   // []interface{}{10}
 
 * Has room for performance optimizations.
 
-* `LinkedSet` and `SyncLinkedSet` don't expose a way to iterate over elements without allocating a slice via `.Values()`.
+* `LinkedSet` and `SyncLinkedSet` don't expose a way to iterate over elements without allocating a slice via `.Values()`. Can be rectified on demand.
 
 ## License
 
 https://unlicense.org
 
 ## Misc
-
-Minor note: the terms "head/last" are borrowed from Haskell, for their 4-letter symmetry as opposed to "first/last".
 
 I'm receptive to suggestions. If this library _almost_ satisfies you but needs changes, open an issue or chat me up. Contacts: https://mitranim.com/#contacts
