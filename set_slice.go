@@ -21,7 +21,8 @@ func NewSliceSet(vals ...interface{}) *SliceSet {
 // of "small" and "large" requires more testing; might depend on hardware.
 //
 // There's no "concurrent" version of this type, mainly because it would have to
-// sacrifice elegance. It may be added on demand.
+// sacrifice elegance. It can be added on demand, but would have to be a struct
+// enclosing a slice.
 type SliceSet []interface{}
 
 func (self *SliceSet) Len() int {

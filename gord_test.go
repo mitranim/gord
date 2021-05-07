@@ -543,11 +543,12 @@ func bench(b *B, newSet func() OrdSet) {
 }
 
 // Caution: this benchmark may be misleading. It combines MULTIPLE operations
-// into one, testing the average, looking for worse-case outliers. Ideally, we
-// would split this into individual benchmarks for different operations.
+// into one, testing the average. Ideally, we would split this into individual
+// benchmarks for different operations.
 //
-// This benchmark's main purpose is to demonstrate the degradation of `SliceSet`
-// for large data sets, and identify the size after which it gets really bad.
+// This benchmark's main purpose is to spot worse-case performance degradation,
+// like `SliceSet`'s behavior with large data sets, and identify the breakpoint
+// sizes.
 func benchSized(b *B, newSet func() OrdSet, size int) {
 	set, first, mid, last, next := benchInit(newSet, size)
 	b.ResetTimer()
