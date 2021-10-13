@@ -73,7 +73,7 @@ type OrdSet interface {
 
 	// If the set is empty, returns `(nil, false)`.
 	// Otherwise removes the first value and returns `(val, true)`.
-
+	//
 	// There's no corresponding `.PopFirst` (without the boolean) to avoid the
 	// potential gotcha where the first value was `nil`, but the code would
 	// erroneously think that the set was empty.
@@ -81,7 +81,7 @@ type OrdSet interface {
 
 	// If the set is empty, returns `(nil, false)`.
 	// Otherwise removes the last value and returns `(val, true)`.
-
+	//
 	// There's no corresponding `.PopLast` (without the boolean) to avoid the
 	// potential gotcha where the last value was `nil`, but the code would
 	// erroneously think that the set was empty.
